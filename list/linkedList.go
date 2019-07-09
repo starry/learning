@@ -14,11 +14,17 @@ func main() {
 	v2 := &ListNode{1, nil}
 	v3 := &ListNode{2, nil}
 	v4 := &ListNode{3, nil}
+	v5 := &ListNode{4, nil}
+	v6 := &ListNode{4, nil}
+	v7 := &ListNode{5, nil}
 
 	list = addNodeEnd(v2, list)
 	list = addNodeEnd(v3, list)
 	list = addNodeEnd(v4, list)
-	list = reverseList(list)
+	list = addNodeEnd(v5, list)
+	list = addNodeEnd(v6, list)
+	list = addNodeEnd(v7, list)
+	list = deleteDuplicates(list)
 	printList(list)
 }
 
@@ -41,21 +47,19 @@ func addNodeEnd(v, list *ListNode) *ListNode {
 	return list
 }
 
-// func reverseList(head *ListNode) *ListNode {
-// 	if head == nil {
-// 		return head
-// 	}
+func deleteDuplicates(head *ListNode) *ListNode {
+	if head == nil || head.Next == nil {
+		return head
+	}
+	fmt.Printf("start %v\n", head)
+	head.Next = deleteDuplicates(head.Next)
+	fmt.Printf("end %v\n", head)
+	if head.Val == head.Next.Val {
+		return head.Next
+	}
 
-// 	cur := head
-
-// 	if cur.Next == nil {
-// 		return cur
-// 	}
-// 	newHead := reverseList(cur.Next)
-// 	cur.Next.Next = cur 翻转链表的指向
-// 	cur.Next = nil 记得赋值NULL，防止链表错乱
-// 	return newHead 新链表头永远指向的是原链表的链尾
-// }
+	return head
+}
 
 func reverseList(head *ListNode) *ListNode {
 	var result *ListNode

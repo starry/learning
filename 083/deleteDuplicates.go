@@ -6,6 +6,7 @@ type ListNode struct {
 }
 
 // 给定一个排序链表，删除所有重复的元素，使得每个元素只出现一次。
+// head.next = head.next.next
 func deleteDuplicates(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {
 		return head
@@ -29,4 +30,8 @@ func deleteDuplicates2(head *ListNode) *ListNode {
 		}
 	}
 	return head
+}
+
+func main() {
+
 }

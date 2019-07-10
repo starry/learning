@@ -6,6 +6,11 @@ import (
 	"../recursive"
 )
 
+func ExampleFibonacci() {
+	fmt.Println(recursive.Fibonacci(10))
+	// Output: 55
+}
+
 func ExamplePrintNumber() {
 	result := recursive.PrintNumber(12345)
 	fmt.Println(result)

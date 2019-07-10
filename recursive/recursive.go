@@ -40,3 +40,20 @@ func Strlen(str string) int {
 	substring := string(runes[1:])
 	return Strlen(substring) + 1
 }
+
+// ReverseString 反转字符串
+func ReverseString(s string) string {
+	r := []rune(s)
+	for i, j := 0, len(r)-1; i < len(r)/2; i, j = i+1, j-1 {
+		r[i], r[j] = r[j], r[i]
+	}
+	return string(r)
+}
+
+// DigitSum 写一个递归函数DigitSum(n)，输入一个非负整数，返回组成它的数字之和：
+func DigitSum(n int) int {
+	if n <= 10 {
+		return n
+	}
+	return n%10 + DigitSum(n/10)
+}

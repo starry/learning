@@ -26,3 +26,13 @@ func ExampleStrlen() {
 	fmt.Println(recursive.Strlen("abcdef"))
 	// Output: 6
 }
+
+func ExampleReverseString() {
+	fmt.Println(recursive.ReverseString("abcdefghijklmn"))
+	// Output: nmlkjihgfedcba
+}
+
+func ExampleDigitSum() {
+	fmt.Println(recursive.DigitSum(12345))
+	// Output: 15
+}

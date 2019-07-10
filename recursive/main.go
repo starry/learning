@@ -12,10 +12,20 @@ func factorial(n int64) int64 {
 	return n * factorial(n-1)
 }
 
+// 编写一个函数，可以分别打印一个整数十进制的每一位
+func printNumber(n int64) {
+	if n > 9 {
+		printNumber(n / 10)
+	}
+	fmt.Println(n % 10)
+}
+
 func main() {
-	fmt.Print("Enter a number: ")
-	var n int64
-	fmt.Scanln(&n)
-	f := factorial(n)
-	fmt.Printf("%d的阶乘是%d\n", n, f)
+	// printNumber(12345)
+
+	// fmt.Print("Enter a number: ")
+	// var n int64
+	// fmt.Scanln(&n)
+	// f := factorial(n)
+	// fmt.Printf("%d的阶乘是%d\n", n, f)
 }

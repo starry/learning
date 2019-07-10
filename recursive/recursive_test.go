@@ -21,3 +21,8 @@ func ExampleFactorial() {
 	fmt.Println(recursive.Factorial(5))
 	// Output: 120
 }
+
+func ExampleStrlen() {
+	fmt.Println(recursive.Strlen("abcdef"))
+	// Output: 6
+}

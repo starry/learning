@@ -1,9 +1,6 @@
-package main
+package leetcode
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import "learning/util"
 
 /**
  *  找出两个链表的交点
@@ -12,7 +9,7 @@ type ListNode struct {
  *  同样地，当访问 B 链表的指针访问到链表尾部时，令它从链表 A 的头部开始访问链表 A。
  *	这样就能控制访问 A 和 B 两个链表的指针能同时访问到交点。
  */
-func getIntersectionNode(headA, headB *ListNode) *ListNode {
+func getIntersectionNode(headA, headB *util.ListNode) *util.ListNode {
 	l1 := headA
 	l2 := headB
 
@@ -30,8 +27,4 @@ func getIntersectionNode(headA, headB *ListNode) *ListNode {
 	}
 
 	return l1
-}
-
-func main() {
-
 }

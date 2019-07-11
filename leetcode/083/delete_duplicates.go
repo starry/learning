@@ -1,13 +1,10 @@
-package main
+package leetcode
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import "learning/util"
 
 // 给定一个排序链表，删除所有重复的元素，使得每个元素只出现一次。
 // head.next = head.next.next
-func deleteDuplicates(head *ListNode) *ListNode {
+func deleteDuplicates(head *util.ListNode) *util.ListNode {
 	if head == nil || head.Next == nil {
 		return head
 	}
@@ -20,7 +17,7 @@ func deleteDuplicates(head *ListNode) *ListNode {
 	return head
 }
 
-func deleteDuplicates2(head *ListNode) *ListNode {
+func deleteDuplicates2(head *util.ListNode) *util.ListNode {
 	cur := head
 	for cur != nil && cur.Next != nil {
 		if cur.Next.Val == cur.Val {
@@ -30,8 +27,4 @@ func deleteDuplicates2(head *ListNode) *ListNode {
 		}
 	}
 	return head
-}
-
-func main() {
-
 }

@@ -1,12 +1,8 @@
-package reverselist
+package leetcode
 
-// ListNode Definition for singly-linked list.
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import "learning/util"
 
-func reverseList(head *ListNode) *ListNode {
+func reverseList(head *util.ListNode) *util.ListNode {
 	if head == nil {
 		return head
 	}

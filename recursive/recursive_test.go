@@ -2,8 +2,7 @@ package recursive_test
 
 import (
 	"fmt"
-
-	"../recursive"
+	"learning/recursive"
 )
 
 func ExampleFibonacci() {

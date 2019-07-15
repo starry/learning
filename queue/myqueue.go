@@ -30,26 +30,3 @@ func (q *MyQueue) Font() int {
 func (q *MyQueue) IsEmpty() bool {
 	return q.Start >= len(q.Data)
 }
-
-// func main() {
-// 	var myQueue MyQueue
-
-// 	myQueue.EnQueue(5)
-// 	myQueue.EnQueue(3)
-
-// 	if myQueue.IsEmpty() == false {
-// 		fmt.Println(myQueue.Font())
-// 	}
-
-// 	myQueue.DeQueue()
-
-// 	if myQueue.IsEmpty() == false {
-// 		fmt.Println(myQueue.Font())
-// 	}
-
-// 	myQueue.DeQueue()
-
-// 	if myQueue.IsEmpty() == false {
-// 		fmt.Println(myQueue.Font())
-// 	}
-// }
